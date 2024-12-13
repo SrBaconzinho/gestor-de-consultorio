@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="prontuarui.css">
+    <title>Prontuário</title>
+</head>
+<body>
+
+    <div id="header">
+        <header>
+            <label for="Bem-vindo">Prontuário</label>
+            <img src="../home/psychology.png" alt="psi-icon" onmouseover="showMenu()">
+        </header>
+    </div>
+    <nav id="show-menu">
+        <ul onmouseleave="hideMenu()">
+            <li onclick="goToHorario()">Horários</li>
+            <li onclick="GoToPacientes()">Pacientes</li>
+            <li onclick="goToDocumentos()">Documentos</li>
+            <li onclick="goToAlunos()">Alunos</li>
+            <li onclick="goToCadastrar()">Novo Funcionário</li>
+            <li onclick="goToFinanceiro()">Financeiro</li>
+            <li onclick="logout()">Sair</li>
+        </ul>
+    </nav>
+
+    <div class="seletor">
+        <div class="paciente">
+            <label for="paciente">Paciente: </label>
+            <select name="nome" id="name"></select>
+        </div>
+        <div class="intervalo">
+            <label for="dataInicio">De: </label>
+            <input type="date" name="data" id="dataInicio">
+            <label for="dataFim">Até: </label>
+            <input type="date" name="data" id="dataFim">
+        </div>
+        <input type="button" id="input-button" value="Gerar Prontuário" onclick="gerarDocumento()">
+    </div>
+    
+    <input type="button" value="Novo Prontuário" class="buttonNew" onclick="newAnaminese()">
+
+    <div class="newAnaminese" id="newAnaminese">
+        <label for="name"> Paciente: </label>
+        <select name="paciente" id="paciente-anaminese"></select>
+        <label for="date">Data de atendimento</label>
+        <input type="date" id="dataAtendimento">
+        <label for="objetivo">Objetivo da sessão</label>
+        <textarea name="objetivo" id="obj-ana"></textarea>
+        <label for="relato">Relato do paciente</label>
+        <textarea name="relato" id="rel-ana"></textarea>
+        <label for="intervensão">Intervensão</label>
+        <textarea name="intervensão" id="inter-ana"></textarea>
+        <label for="evolução">Evolução observada</label>
+        <textarea name="evolução" id="evo-ana"></textarea>
+        <label for="observações">Observações adicionais</label>
+        <textarea name="observações" id="obs-ana"></textarea>
+        <input type="button" name="confirmar" id="salvar-ana" value="Salvar Anaminese" onclick="salvarAna()">
+        <input type="button" name="confirmar" id="cancel-ana" value="Cancelar Anaminese" onclick="cancelAna()">
+    </div>
+
+    <div class="editAna" id="editAna">
+        <label for="name"> Paciente: </label>
+        <select name="paciente" id="paciente-anaminese-edit"></select>
+        <label for="date">Data de atendimento</label>
+        <input type="date" id="dataAtendimento-edit">
+        <label for="objetivo">Objetivo da sessão</label>
+        <textarea name="objetivo" id="obj-ana-edit"></textarea>
+        <label for="relato">Relato do paciente</label>
+        <textarea name="relato" id="rel-ana-edit"></textarea>
+        <label for="intervensão">Intervensão</label>
+        <textarea name="intervensão" id="inter-ana-edit"></textarea>
+        <label for="evolução">Evolução observada</label>
+        <textarea name="evolução" id="evo-ana-edit"></textarea>
+        <label for="observações">Observações adicionais</label>
+        <textarea name="observações" id="obs-ana-edit"></textarea>
+        <input type="button" name="confirmar" id="edit-ana" value="Salvar ediçao" onclick="salvarEdicao(event)">
+        <input type="button" name="confirmar" id="cancel-edit-ana" value="Cancelar Anaminese" onclick="cancelEdit()">
+    </div>
+    <div class="showAna">
+        <h1>Selecione para editar</h1>
+        <div class="displayItens">
+
+            <label for="name">Nome</label>
+            <select name="name" id="nameToShowAna">
+            </select>
+                <input type="date" id="dateToFind">
+                <input type="button" value="procurar" id="findAnaminese" onclick="buscarProntuario()">
+        </div>
+
+        <div id="divContainer">
+
+            
+            
+            
+
+        </div>
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="../home/firebase-init.js"></script>
+    <script src="prontuario.js"></script>
+</body>
+</html>

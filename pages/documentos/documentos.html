@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="documentos.css">
+    <title>Documentos</title>
+</head>
+<body>
+
+    <div id="header">
+                    
+        <header><label for="Bem-vindo">Gerar documentos de frequência</label>
+            
+            <img src="psychology.png" alt="psi-icon" onmouseover="showMenu()" >
+        </div>
+        <nav id="show-menu">
+            <ul onmouseleave="hideMenu()">
+                <li onclick="goToHorario()">Horários </li>
+                <li onclick="GoToPacientes()">Pacientes</li>
+                <li onclick="goToDocumentos()">Documentos</li>
+                <li onclick="goToAlunos()">Alunos</li>
+                <li onclick="goToCadastrar()">Novo Funcionário</li>
+                <li onclick="goToFinanceiro()">Financeiro</li>
+                <li onclick="logout()">Sair</li>
+            </ul>
+        </nav>
+
+        <div class="seletor">
+
+            
+            <div class="paciente">
+                <label for="paciente">Paciente: </label>
+                <select name="nome" id="name">
+                    
+                </select>
+            </div>
+            <div class="intervalo">
+                <label for="dataInicio">De: </label>
+                <input type="date" name="data" id="dataInicio">
+                <label for="dataFim">Até: </label>
+                <input type="date" name="data" id="dataFim">
+            </div>
+            <input type="button" id="input-button" value="Gerar histórico" onclick= "gerarDocumento()">
+         </div>
+         <div class="responsavel"><select name="responsavel" id="responsavel">
+            <option value="responsavel1">responsavel1</option>
+         </select></div>
+
+
+         <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+         <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+         <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+         <script src="../home/firebase-init.js"></script>
+         <!-- <script type="module" src="data.mjs"></script>  -->
+         <script src="documentos.js"></script>
+</body>
+</html>

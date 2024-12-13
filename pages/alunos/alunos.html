@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciamento de alunos</title>
+    <link rel="stylesheet" href="alunos.css">
+  </head>
+  <body>
+    <div id="overlay">
+      <div id="container">
+        <form>
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" >
+          <label for="dataNascimento">Data de nascimento:</label>
+          <input type="date" id="dataNascimento" name="dataNascimento" >
+          <label for="endereco">Endereço:</label>
+          <input type="text" id="endereco" name="endereco">
+          <label for="cpf">CPF:</label>
+          <input type="text" id="cpf" name="cpf" placeholder="123.456.789-00" >
+          <label for="sexo">Sexo:</label>
+          <select id="sexo" name="sexo" >
+              <option value="Masculino">Masculino</option>
+              <option value="Feminino">Feminino</option>
+              <option value="outro">Outro</option>
+          </select>
+          <label for="servico">Serviço prestado:</label>
+          <input type="text" id="servico">
+          <label for="telefone1">Telefone 1:</label>
+          <input type="text" id="telefone1" name="telefone1" placeholder="(99) 99999-9999" >
+          <label for="observacao">Observação:</label>
+          <textarea id="observacao" name="observacao"></textarea>
+          <input type="button" id="input-button" value="Cadastrar" onclick="cadastrarNew()">
+          <input type="button" id="input-button" value="Cancelar" onclick="hideCadastro()">
+                
+            </form>
+      </div>
+    </div>
+    <div class="overlay-show">
+      <div class="show">
+        <h1>Ficha de Aluno</h1>
+        <div class="paciente-info">
+            <div><label for="nome">Nome:</label> <input type="text" id="nome-show" value="João Silva"></div>
+            <div><label for="nascimento">Data de Nascimento:</label> <input type="text" id="data-show" value="1995-03-15"></div>
+            <div><label for="endereco">Endereço:</label> <input type="text" id="endereco-show" value="Rua das Flores, 123"></div>
+            <div><label for="cpf">CPF:</label> <input type="text" id="cpf-show" value="123.456.789-00"></div>
+            <div><label for="sexo">Sexo:</label><select name="sexo" id="sexo-show"><option value="Masculino">Masculino</option><option value="Feminino">Feminino</option><option value="Outro">Outro</option></select></div>
+            <div><label for="servico">Serviço:</label><input type="text" id="servico-show"></div>
+            <div><label for="telefone">Telefone:</label> <input type="text" id="tell-show" value="(11) 98765-4321"></div>
+        </div>
+        <div class="observacoes">
+            <h4>Observações:</h4>
+            <textarea id="obs-show" placeholder="Digite as observações aqui..."></textarea>
+        </div>
+        <button id="input-button" class="edit" onclick="editInfos()">Salvar Edições</button>
+        <button id="input-button" onclick="fecharInfo()">Fechar</button>
+    </div>
+
+    </div>
+    <div id="header">
+                    
+      <header><label for="Bem-vindo">Alunos do instituto</label>
+          
+          <img src="psychology.png" alt="psi-icon" onmouseover="showMenu()" >
+      </div>
+      <nav id="show-menu">
+          <ul onmouseleave="hideMenu()">
+              <li onclick="goToHorario()">Horários </li>
+              <li>Pacientes</li>
+              <li onclick="goToDocumentos()">Documentos</li>
+              <li onclick="goToAlunos()">Alunos</li>
+              <li onclick="goToCadastrar()">Novo Funcionário</li>
+              <li onclick="goToFinanceiro()">Financeiro</li>
+              <li onclick="logout()">Sair</li>
+          </ul>
+      </nav>
+      <input type="button" value="+" id="addAluno" onclick="showCadastro()">
+      <div class="alunos" id="alunos">
+       
+        <!-- inserido no js -->
+        </div>
+      <div class="paciente">
+      
+      </div>
+    </header>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="../home/firebase-init.js"></script>
+    <script src="alunos.js"></script>
+    <script src="../../loading.js"></script>
+  </body>
+</html>

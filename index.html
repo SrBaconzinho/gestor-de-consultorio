@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="loading.css" />
+  </head>
+  <body class="centralize">
+    <form>
+      <div class="form-field">
+        <div class="label">Email</div>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="seu@email.com"
+          onchange="verifyEmail()"
+        />
+        <div class="error" id="email-required-error">Email é obrigatório</div>
+        <div class="error" id="email-invalid-error">Email é inválido</div>
+      </div>
+      <div class="form-field">
+        <div class="label"><label>Senha</label></div>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Senha"
+          onchange="verifyPassword()"
+        />
+        <div class="error" id="password-required-error">
+          A senha deve conter pelo menos 6 digitos
+        </div>
+      </div>
+      <div>
+        <button type="button" class="solid" id="login-button" onclick="login()">
+          Entrar
+        </button>
+      </div>
+      <div>
+        <button
+          type="button"
+          class="clear"
+          id="recover-password-button"
+          onclick="recoverPassword()"
+          disabled="true"
+        >
+          Recuperar senha
+        </button>
+      </div>
+      <div>
+        <button type="button" class="outline" onclick="register()">
+          Registrar
+        </button>
+      </div>
+    </form>
+    <div id="overlay"><div id="loading"></div></div>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="pages/home/firebase-init.js"></script>
+    <script src="index.js"></script>
+    <script src="loading.js"></script>
+  </body>
+</html>

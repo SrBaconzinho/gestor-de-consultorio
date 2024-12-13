@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+  }
+  body {
+    visibility: visible;
+  }
+  
+  #header {
+    background-color: #ac7c54;
+    height: 5em;
+    text-align: center;
+  }
+  
+  #header label {
+    text-align: justify;
+    display: inline;
+    font-size: 2em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  
+  img {
+    margin-left: 1vw;
+    display: block;
+    left: 0;
+    width: 2em;
+  }
+  
+  #show-menu ul {
+    background-color: rgba(0, 0, 0, 0);
+    width: 15em;
+    position: absolute;
+    display: none;
+  }
+  #show-menu ul li img {
+    display: inline-flex;
+    margin-right: 1rem;
+    align-items: end;
+  }
+  
+  #show-menu ul li:hover {
+    background-color: rgb(199, 192, 192);
+    cursor: pointer;
+  }
+  #show-menu ul li {
+    background-color: gray;
+    text-align: start;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    z-index: 50;
+  }
+  
+  .aluno {
+    visibility:visible;
+    z-index: -200;
+  }
+  
+  .boxAluno:hover {
+    cursor: pointer;
+    background-color: #ffdead56 ;
+  }
+
+  .alunos{
+    margin-top: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: -200;
+
+    overflow: auto;
+  }
+  
+  .boxAluno {
+    position: relative;
+    margin-left: 1vw;
+    min-width: 95vw;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    border: #333 ridge 2px;
+    align-items: start;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    min-height: 20vh;
+    overflow: auto;
+    z-index: -10;
+  }
+  
+  .boxAluno #cancelar:hover {
+    font-weight: 700;
+  }
+  span {
+    font-weight: 700;
+  }
+  
+  .boxAluno #cancelar {
+    background-color: transparent;
+    color: red;
+    border: none;
+    display: flex;
+    margin-left: 93vw;
+    margin-top: -5vh;
+  }
+  
+  #addAluno:hover {
+    border: solid 2px black;
+  }
+  
+  #addAluno {
+    z-index: 2;
+    position: absolute;
+    font-weight: 600;
+    color: green;
+    border: solid 2px forestgreen;
+    background-color: transparent;
+    display: block;
+    border-radius: 100%;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 97%;
+    margin-top: 2vh;
+  }
+  .overlay {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: rgb(0, 0, 0); /* Fundo semi-transparente */
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #container {
+    display: none;
+    margin-left: 28%;
+    position: absolute;
+    background-color: #b9a3a3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    z-index: 9999;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="number"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  textarea {
+    height: 100px;
+  }
+  
+  #input-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  /* Estilos para a ficha de paciente */
+  
+  .show {
+    display: none;
+    z-index: 99999;
+    left: 24vw;
+    position:absolute;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 50vw;
+    
+  }
+  
+  
+  .observacoes {
+    margin-bottom: 20px;
+  }
+  
+  .observacoes h4 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .observacoes textarea {
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #555;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+  }
+  

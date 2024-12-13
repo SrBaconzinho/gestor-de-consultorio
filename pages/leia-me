@@ -1,0 +1,55 @@
+Sistema que armazena informações no ireGestor de Agendamento de Horários para uma Clínica de Psicologia
+
+Descrição
+
+O Gestor de Agendamento de Horários é uma aplicação web desenvolvida para auxiliar clínicas de psicologia no gerenciamento de pacientes, agendamentos e atendimentos. A solução permite organizar e otimizar processos, desde o cadastro de pacientes até o controle financeiro, tudo de maneira prática e eficiente.
+
+Principais funcionalidades:
+
+Cadastro e autenticação de usuários.
+
+Gerenciamento de pacientes, incluindo informações como nome, idade, sexo, endereço e contato.
+
+Listagem de pacientes em ordem alfabética.
+
+Agendamento de consultas filtradas por datas e organizadas cronologicamente.
+
+Controle de status do atendimento (agendado, confirmado, atendido) com respostas visuais.
+
+Geração de páginas de frequência com campos de assinatura, nome e CRP do responsável pelo paciente.
+
+Cadastro dinâmico de novos funcionários.
+
+Aba financeira que emite relatórios em Excel com dados de atendimentos realizados.
+
+Tecnologias Utilizadas
+
+Frontend: HTML, CSS, JavaScript.
+
+Backend: Firebase Firestore para banco de dados e autenticação.
+
+Outras Ferramentas: Excel para relatórios financeiros.
+
+Como Executar o Projeto
+
+Requisitos
+
+Node.js instalado.
+
+
+Credenciais de Teste
+
+E-mail: teste@email.com
+
+Senha: 123456
+
+
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE para mais informações.
+
+Contato
+
+Autor: Miler Virgulino de Souza
+
+E-mail: miler.virgulino@gmail.com   
+
+GitHub: https://github.com/SrBaconzinho

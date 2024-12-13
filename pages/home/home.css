@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+body {
+  visibility: hidden;
+}
+#done{
+  position: absolute;
+  margin-left: 70vw;
+  margin-top: 4.6%;
+}
+
+
+#confirm{
+  position: absolute;
+  margin-left: 59.5vw;
+  margin-top: 4.6%;
+}
+
+
+
+
+#cancel{
+  position: absolute;
+  margin-left: 50vw;
+  margin-top: 4.6%;
+}
+
+#header {
+  background-color: #ac7c54;
+  height: 5em;
+  text-align: center;
+}
+
+#header label {
+  text-align: justify;
+  display: inline;
+  font-size: 2em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+img {
+  margin-left: 1vw;
+  display: block;
+  left: 0;
+  width: 2em;
+}
+
+#show-menu ul {
+  z-index: 99999;
+  background-color: rgba(0, 0, 0, 0);
+  width: 15em;
+  position: absolute;
+  display: none;
+}
+#show-menu ul li img {
+  display: inline-flex;
+  margin-right: 1rem;
+  align-items: end;
+}
+
+#show-menu ul li:hover {
+  background-color: rgb(199, 192, 192);
+  cursor: pointer;
+}
+#show-menu ul li {
+  background-color: gray;
+  text-align: start;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  z-index: 2;
+}
+
+#dateToShow {
+  margin-right: 1.2vw;
+  text-align: center;
+  width: 20%;
+  background-color: #cca17e;
+  border-radius: 20px;
+}
+
+#label-agenda {
+  position: absolute;
+  text-align: center;
+  align-items: center;
+  margin-left: 40vw;
+  font-size: 24px;
+}
+#agenda {
+  border: solid black;
+  margin: 10px 20px 10px 20px;
+}
+
+#agenda-span {
+  font-size: 24px;
+  margin-top: 10px;
+  text-align: center;
+  display: block;
+  align-items: center;
+}
+
+.select select{
+  width: 100vw;
+  margin-left: 40vw;
+  text-align: center;
+  align-items: center;
+}
+.select{
+
+  position: relative;
+  align-content: center;
+  display: flex;
+  width: 59%;
+  text-align: center;
+  align-items: center;
+}
+
+
+
+.paciente:hover {
+  background-color: #ac7c5456;
+  cursor: pointer;
+  /* border: solid 1px red; */
+}
+#button-add-new:hover {
+  border: solid 3px black;
+}
+
+#cancelar:hover {
+  cursor: pointer;
+}
+#cancelar {
+  text-decoration: solid;
+  border: none;
+  align-items: center;
+  text-align: center;
+  color: red;
+  background: none;
+  position: absolute;
+  margin-left: 94vw;
+}
+#button-add-new {
+  border-radius: 70%;
+  width: 40px;
+  height: 40px;
+}
+#add-new {
+  padding-top: 0vh;
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  left: 95%;
+  top: 20vh;
+  
+}
+.paciente {
+  position: relative;
+  border: ridge 2px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.infos {
+  font-weight: 700;
+  padding-left: 20px;
+}
+.date {
+  padding-top: 10px;
+  font-weight: 700;
+  display: block;
+  align-items: center;
+  text-align: center;
+}
+#novo-agendamento h2 {
+  display: block;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+}
+#novo-agendamento {
+  top: 8%;
+  left: 25%;
+  z-index: 50;
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  width: 40%;
+  height: 85%;
+  background-color: #d3d3d3;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.editar-agendamento{
+  top: 8%;
+  left: 25%;
+  z-index: 50;
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  width: 40%;
+  height: 85%;
+  background-color: #d3d3d3;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+#overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.219);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+#button-agendar:hover {
+  background-color: green;
+  cursor: pointer;
+}
+#button-agendar {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+}
+#button-cancelar:hover {
+  background-color: red;
+  cursor: pointer;
+}
+#button-cancelar {
+  position: relative;
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  left: 70%;
+  
+  
+}
+
+#container-agendar{
+  display: flex;
+  flex-direction: row;
+}
+
+#recorrente-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  height: 2rem;
+  margin-bottom: 1rem;
+  
+  
+}
+#recorrente{
+  display: flex;
+  position: relative;
+  width: 5rem;
+  margin-top: 0.1rem;
+  padding-left: 0;
+
+}
+
+.checkbox{
+  display: flex;
+  flex-direction: row;
+}
+
+#frequencia{
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  height: 2.5rem;
+  font-size: 1rem;
+  width: 20%;
+}
+
+#frequencia-n{
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  height: 2.5rem;
+  font-size: 1rem;
+  width: 20%;
+}
+
+#valor{
+
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  height: 2.5rem;
+  font-size: 1rem;
+  width: 20%;
+}
+  
+.valor{
+  display: flex;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}

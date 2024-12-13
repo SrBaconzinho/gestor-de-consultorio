@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+    <title>Cadastrar colaborador</title>
+</head>
+<body>
+
+    <div id="header">
+                    
+        <header><label for="Bem-vindo">Cadastrar novo colaborador</label>
+            
+            <img src="./../home/psychology.png" alt="psi-icon" onmouseover="showMenu()" >
+        </div>
+        <nav id="show-menu">
+            <ul onmouseleave="hideMenu()">
+                <li onclick="goToHorario()">Horários </li>
+                <li onclick="GoToPacientes()">Pacientes</li>
+                <li onclick="goToDocumentos()">Documentos</li>
+                <li onclick="goToAlunos()">Alunos</li>
+                <li onclick="goToCadastrar()">Novo Funcionário</li>
+                <li onclick="goToFinanceiro()">Financeiro</li>
+                <li onclick="logout()">Sair</li>
+            </ul>
+        </nav>
+
+      <div class="cadastro">
+
+          <label for="nomeCompleto" >Nome completo</label>
+        <input type="text" class="imp" id="nomeCompleto">
+          <label for="aplido">Nome de exibição</label>
+        <input type="text" class="imp" id="apelido">
+          <label for="crp">CRP</label>
+        <input type="text" class="imp" id="crp" placeholder="XX/XXXXXX">
+          <label for="email">E-mail</label>
+        <input type="text" class="imp" id="email">
+          <label for="senha1">Senha</label>
+        <input type="password" class="imp" id="senha1">
+          <label for="senha2">Repita a senha</label>
+        <input type="password" class="imp" id="senha2">
+        <input type="button" value="Cadastrar Colaborador" onclick="cadastrar()">
+      </div>
+
+
+         <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+         <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+         <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+         <script src="../home/firebase-init.js"></script>
+         <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+         
+
+         <script>
+           $('#crp').mask('00/000000')
+          </script>
+          
+
+         <!-- <script type="module" src="data.mjs"></script>  -->
+         <script src="cadastro.js"></script>
+</body>
+</html>
